@@ -24,19 +24,6 @@
                         <div class="col-lg-6">
                             <div class="login-area">
                                 <div class="row align-items-center">
-                                    <div class="col-12 col-sm">
-                                        <form id='inform' class="form" method="post" action="{% url 'login' %}">
-                                            {% csrf_token %}
-                                            <input type="text" placeholder="Username" name="username" class="single-field">
-                                    </div>
-                                    <div class="col-12 col-sm">
-                                        <input type="password" placeholder="Password" name="password" class="single-field">
-                                    </div>
-                                    <div class="col-12 col-sm-auto">
-                                        <!-- <input id='insubmit' type="submit" class="add" value="Log in" /> -->
-                                        <button class="login-btn" type="submit">Login </button>
-                                        </form>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -55,29 +42,29 @@
                         </div>
                         <div class="col-lg-6 order-1 order-lg-2 d-flex align-items-center justify-content-center">
                             <div class="signup-form-wrapper">
-                                <h1 class="create-acc text-center">Create An Account</h1>
+                                <h1 class="create-acc text-center">Tell us about yourself</h1>
                                 <div class="signup-inner text-center">
-                                    <h3 class="title">Wellcome to Adda</h3>
-                                    <form class="signup-inner--form" method="post" action="{% url 'signup' %}">
+                                    <h3 class="title">Edit your information</h3>
+                                    <form class="signup-inner--form" method="post" action="{% url 'edit_profile' %}">
                                         {% csrf_token %}
                                         <div class="row">
                                             <div class="col-12">
-                                                {{ form.email }}
+                                                {{ form.age }}
                                             </div>
                                             <div class="col-md-12">
-                                                {{ form.username }}
+                                                {{ form.gender }}
                                             </div>
-                                            <div class="col-md-6">
-                                                {{ form.first_name }}
+                                            <div class="col-md-12">
+                                                {{ form.country }}
                                             </div>
-                                            <div class="col-md-6">
-                                                {{ form.last_name }}
-                                            </div>
-                                            <div class="col-12">
-                                                {{ form.password1 }}
+                                            <div class="col-md-12">
+                                                {{ form.owner }}
                                             </div>
                                             <div class="col-12">
-                                                {{ form.password2 }}
+                                                {{ form.bio }}
+                                            </div>
+                                            <div class="col-12">
+                                                {{ form.picture }}
                                             </div>
                                             <div>
                                                 {% for i in messages %}
@@ -110,11 +97,11 @@
                                                 </select>
                                             </div> -->
                                             <div class="col-12">
-                                                <button type="submit" class="submit-btn">Create Account</button>
+                                                <button type="submit" class="submit-btn">Save</button>
                                             </div>
-                                        </div>
+                                        <!-- </div>
                                         <h6 class="terms-condition">I have read & accepted the <a href="#">terms of
-                                                use</a></h6>
+                                                use</a></h6> -->
                                     </form>
                                 </div>
                             </div>
