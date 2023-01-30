@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from .forms import CustomUserCreationForm, ProfileForm
 from django.contrib.auth import authenticate, login
+from .models import Profile
 
 
 def signup_view(request):
@@ -9,7 +10,12 @@ def signup_view(request):
         form = CustomUserCreationForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('edit_profile')
+            username = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password1')
+            auth = authenticate(request, username=username, password=password)
+            login(request, auth)
+            Profile.objects.create(owner = request.user)
+            return redirect('profile')
         else:
             for field in form:
                 for error in field.errors:
@@ -19,16 +25,17 @@ def signup_view(request):
 
 
 def edit_profile(request):
+    profile = Profile.objects.get(owner = request.user)
     if request.method == 'POST':
-        form = ProfileForm(request.POST)
+        form = ProfileForm(request.POST, request.FILES, instance=profile)
         if form.is_valid():
             form.save()
-            return redirect('profile')
+            return redirect('edit_profile')
         else:
             for field in form:
                 for error in field.errors:
                     messages.error(request, error)
-    context = {'form': ProfileForm()}
+    context = {'form': ProfileForm(instance=profile)}
     return render(request, 'NetworkApp/edit_profile.html', context)
 
 

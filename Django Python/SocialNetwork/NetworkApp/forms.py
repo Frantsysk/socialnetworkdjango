@@ -19,18 +19,33 @@ class CustomUserCreationForm(UserCreationForm):
 
 class ProfileForm(ModelForm):
     class Meta:
-        fields = '__all__'
+        fields = ['age', 'country', 'gender', 'bio', 'picture', 'facebook_url', 'instagram_url', 'google_url', 'email', 'work_place']
+        # exclude = ['owner']
         model = Profile
+        widgets = {
+            'age': forms.NumberInput(attrs={'placeholder': 'age', 'class': 'single-field'}),
+            'country': forms.TextInput(attrs={'placeholder': 'country', 'class': 'single-field'}),
+            'gender': forms.TextInput(attrs={'placeholder': 'your gender', 'class': 'single-field'}),
+            'bio': forms.Textarea(attrs={'placeholder': 'tell the world about yourself', 'class': 'single-field', 'rows': 5}),
+            'picture': forms.ClearableFileInput(attrs={'class': 'single-field'}),
+            'facebook_url': forms.TextInput(attrs={'placeholder': 'facebook url', 'class': 'single-field'}),
+            'instagram_url': forms.TextInput(attrs={'placeholder': 'instagram url', 'class': 'single-field'}),
+            'google_url': forms.TextInput(attrs={'placeholder': 'google link', 'class': 'single-field'}),
+            'email': forms.EmailInput(attrs={'placeholder': 'email', 'class': 'single-field'}),
+            'work_place': forms.TextInput(attrs={'placeholder': 'work place', 'class': 'single-field'})
+        }
+
+
+
+
+
+
+    
+
+
 
     # country = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Country', 'class': 'single-field'}))
     # bio = forms.IntegerField(widget=forms.TextInput(attrs={'placeholder': 'Bio', 'class': 'single-field'}))
     # picture = forms.ImageField(widget=forms.ImageField(attrs={'class': 'single-field'}))
     # gender = forms.CharField(widget=forms.EmailInput(attrs={'placeholder': 'Gender', 'class': 'single-field'}))
     # age = forms.IntegerField(widget=forms.IntegerField(attrs={'placeholder': 'Age', 'class': 'single-field'}))
-
-    def __init__(self, *args, **kwargs):
-        super(ProfileForm, self).__init__(*args, **kwargs)
-        for visible in self.visible_fields():
-            visible.field.widget.attrs['class'] = 'single-field'
-
-
