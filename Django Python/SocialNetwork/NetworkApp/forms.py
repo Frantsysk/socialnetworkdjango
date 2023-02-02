@@ -19,7 +19,7 @@ class CustomUserCreationForm(UserCreationForm):
 
 class ProfileForm(ModelForm):
     class Meta:
-        fields = ['age', 'country', 'gender', 'bio', 'picture', 'facebook_url', 'instagram_url', 'google_url', 'email', 'work_place']
+        fields = ['age', 'country', 'gender', 'bio', 'picture', 'cover_picture','facebook_url', 'instagram_url', 'google_url', 'email', 'work_place']
         # exclude = ['owner']
         model = Profile
         widgets = {
@@ -28,6 +28,7 @@ class ProfileForm(ModelForm):
             'gender': forms.TextInput(attrs={'placeholder': 'your gender', 'class': 'single-field'}),
             'bio': forms.Textarea(attrs={'placeholder': 'tell the world about yourself', 'class': 'single-field', 'rows': 5}),
             'picture': forms.ClearableFileInput(attrs={'class': 'single-field'}),
+            'cover_picture': forms.ClearableFileInput(attrs={'class': 'single-field'}),
             'facebook_url': forms.TextInput(attrs={'placeholder': 'facebook url', 'class': 'single-field'}),
             'instagram_url': forms.TextInput(attrs={'placeholder': 'instagram url', 'class': 'single-field'}),
             'google_url': forms.TextInput(attrs={'placeholder': 'google link', 'class': 'single-field'}),

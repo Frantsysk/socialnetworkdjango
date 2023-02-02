@@ -35,12 +35,17 @@ def edit_profile(request):
             for field in form:
                 for error in field.errors:
                     messages.error(request, error)
-    context = {'form': ProfileForm(instance=profile)}
+    context = {'form': ProfileForm(instance=profile), 'profile': profile}
     return render(request, 'NetworkApp/edit_profile.html', context)
 
 
 def profile_view(request):
     return render(request, 'NetworkApp/profile.html')
+
+def about_view(request):
+    profile = Profile.objects.get(owner = request.user)
+    context = {'profile': profile}
+    return render(request, 'NetworkApp/about.html', context)
 
 
 def login_action(request):

@@ -45,7 +45,7 @@
                                 <h1 class="create-acc text-center">Tell us about yourself</h1>
                                 <div class="signup-inner text-center">
                                     <h3 class="title">Edit your information</h3>
-                                    <form class="signup-inner--form" method="post" action="{% url 'edit_profile' %}">
+                                    <form class="signup-inner--form" method="post" action="{% url 'edit_profile' %}" enctype="multipart/form-data">
                                         {% csrf_token %}
                                         <div class="row">
                                             <div class="col-12">
@@ -57,8 +57,15 @@
                                             <div class="col-md-12">
                                                 {{ form.country }}
                                             </div>
-                                            <div class="col-12">
+                                            <div class="col-12"> <img src=" {{ profile.picture.url }}" alt="profile">
+                                            </div>
+                                            <div class="col-12">                               
                                                 {{ form.picture }}
+                                            </div>
+                                            <div class="col-12"> <img src=" {{ profile.cover_picture.url }}" alt="cover">
+                                            </div>
+                                            <div class="col-12">                               
+                                                {{ form.cover_picture }}
                                             </div>
                                             <div class="col-12">
                                                 {{ form.google_url }}

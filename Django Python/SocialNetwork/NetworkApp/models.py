@@ -9,15 +9,20 @@ class Profile(models.Model):
     owner = models.OneToOneField(User, on_delete=models.CASCADE)
     bio = models.TextField(blank=True)
     picture = models.ImageField(upload_to='profile_pictures/', blank=True)
+    cover_picture = models.ImageField(upload_to='cover_pictures/', blank=True)
     facebook_url = models.CharField(max_length=100, blank=True)
     instagram_url = models.CharField(max_length=100, blank=True)
     google_url = models.CharField(max_length=100, blank=True)
     email = models.EmailField(max_length=100, blank=True)
     work_place = models.CharField(max_length=100, blank=True)
 
-
     def __str__(self):
         return self.owner.username
+
+class Friend(models.Model):
+    owner = models.OneToOneField(User, blank=True, on_delete=models.CASCADE)
+    friends = models.ManyToManyField(Profile, blank=True)
+
 
 
 
