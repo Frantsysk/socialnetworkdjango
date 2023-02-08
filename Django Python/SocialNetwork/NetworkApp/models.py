@@ -20,8 +20,11 @@ class Profile(models.Model):
         return self.owner.username
 
 class Friend(models.Model):
-    owner = models.OneToOneField(User, blank=True, on_delete=models.CASCADE)
-    friends = models.ManyToManyField(Profile, blank=True)
+    owner = models.ForeignKey(User, blank=True, on_delete=models.CASCADE, related_name='owner')
+    friends = models.ForeignKey(User, blank=True, on_delete=models.CASCADE, related_name='friend')
+
+    def __str__(self):
+        return self.owner.username
 
 
 
