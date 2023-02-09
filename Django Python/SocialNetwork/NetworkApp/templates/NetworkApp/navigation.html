@@ -20,72 +20,30 @@
                                             </div>
                                         </div>
                                         <ul class="dropdown-msg-list">
+                                            {% for i in message %}
                                             <li class="msg-list-item d-flex justify-content-between">
                                                 <!-- profile picture end -->
                                                 <div class="profile-thumb">
                                                     <figure class="profile-thumb-middle">
-                                                        <img src="assets/images/profile/profile-small-3.jpg" alt="profile picture">
+                                                        <img src="{{ i.sender.profile.picture.url }}" alt="profile picture">
                                                     </figure>
                                                 </div>
                                                 <!-- profile picture end -->
 
                                                 <!-- message content start -->
                                                 <div class="msg-content">
-                                                    <h6 class="author"><a href="profile.html">Mili Raoulin</a></h6>
-                                                    <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default</p>
+                                                    <h6 class="author"><a href="profile.html"> {{ i.sender.first_name }}</a></h6>
+                                                    <p> {{ i.text }} </p>
                                                 </div>
                                                 <!-- message content end -->
 
                                                 <!-- message time start -->
                                                 <div class="msg-time">
-                                                    <p>25 Apr 2019</p>
+                                                    <p> {{ i.date }}</p>
                                                 </div>
                                                 <!-- message time end -->
                                             </li>
-                                            <li class="msg-list-item d-flex justify-content-between">
-                                                <!-- profile picture end -->
-                                                <div class="profile-thumb">
-                                                    <figure class="profile-thumb-middle">
-                                                        <img src="assets/images/profile/profile-small-4.jpg" alt="profile picture">
-                                                    </figure>
-                                                </div>
-                                                <!-- profile picture end -->
-
-                                                <!-- message content start -->
-                                                <div class="msg-content">
-                                                    <h6 class="author"><a href="profile.html">Jhon Doe</a></h6>
-                                                    <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default</p>
-                                                </div>
-                                                <!-- message content end -->
-
-                                                <!-- message time start -->
-                                                <div class="msg-time">
-                                                    <p>15 May 2019</p>
-                                                </div>
-                                                <!-- message time end -->
-                                            </li>
-                                            <li class="msg-list-item d-flex justify-content-between">
-                                                <!-- profile picture end -->
-                                                <div class="profile-thumb">
-                                                    <figure class="profile-thumb-middle">
-                                                        <img src="assets/images/profile/profile-small-5.jpg" alt="profile picture">
-                                                    </figure>
-                                                </div>
-                                                <!-- profile picture end -->
-
-                                                <!-- message content start -->
-                                                <div class="msg-content">
-                                                    <h6 class="author"><a href="profile.html">Jon Wileyam</a></h6>
-                                                    <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default</p>
-                                                </div>
-                                                <!-- message content end -->
-
-                                                <!-- message time start -->
-                                                <div class="msg-time">
-                                                    <p>20 Jun 2019</p>
-                                                </div>
-                                                <!-- message time end -->
-                                            </li>
+                                            {% endfor %}
                                         </ul>
                                         <div class="msg-dropdown-footer">
                                             <button>See all in messenger</button>

@@ -1,0 +1,47 @@
+{% extends 'NetworkApp/base.html' %}
+{% block content %}
+
+{% load static %}
+
+{% include 'NetworkApp/navigation.html' %}
+
+{% include 'NetworkApp/navigation_mob.html' %}
+
+
+<main style="margin-top: 10px; margin-left: 500px;">
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <h3> Messages </h3>
+
+    <br>
+
+    {% for i in message %}
+    <h6> {{ i.sender }} </h6>
+    <p> {{ i.text }} </p>
+    <p> {{ i.date }} </p>
+    {% if i.read %} 
+    <small> Seen </small>
+    {% else %}
+    <small> Delivered </small>
+    {% endif %}
+    <hr>
+    {% endfor %}
+
+    <form action="{% url 'message_view' user_id %}" method="POST">
+
+        {% csrf_token %}
+        {{ form.as_p}}
+
+        <input type="submit" value="send_message">
+
+    </form>
+
+
+</main>
+{% endblock %}

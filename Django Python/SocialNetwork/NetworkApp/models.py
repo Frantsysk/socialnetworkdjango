@@ -19,6 +19,7 @@ class Profile(models.Model):
     def __str__(self):
         return self.owner.username
 
+
 class Friend(models.Model):
     owner = models.ForeignKey(User, blank=True, on_delete=models.CASCADE, related_name='owner')
     friends = models.ForeignKey(User, blank=True, on_delete=models.CASCADE, related_name='friend')
@@ -26,6 +27,16 @@ class Friend(models.Model):
     def __str__(self):
         return self.owner.username
 
+
+class Message(models.Model):
+    sender = models.ForeignKey(User, blank=True, on_delete=models.CASCADE, related_name='sender')
+    receiver = models.ForeignKey(User, blank=True, on_delete=models.CASCADE, related_name='receiver')
+    date = models.DateTimeField(auto_now_add=True)
+    text = models.TextField()
+    read = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.sender.username
 
 
 

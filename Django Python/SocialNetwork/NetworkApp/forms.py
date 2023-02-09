@@ -2,7 +2,7 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import get_user_model
 from django.forms import ModelForm
-from .models import Profile
+from .models import Profile, Message
 
 
 class CustomUserCreationForm(UserCreationForm):
@@ -34,6 +34,15 @@ class ProfileForm(ModelForm):
             'google_url': forms.TextInput(attrs={'placeholder': 'google link', 'class': 'single-field'}),
             'email': forms.EmailInput(attrs={'placeholder': 'email', 'class': 'single-field'}),
             'work_place': forms.TextInput(attrs={'placeholder': 'work place', 'class': 'single-field'})
+        }
+
+
+class MessageForm(ModelForm):
+    class Meta:
+        fields = ('text',)
+        model = Message
+        widgets = {
+        'text': forms.Textarea(attrs={'placeholder': 'Text', 'class': 'single-field'})
         }
 
 
