@@ -17,30 +17,63 @@
     <br>
 
 
-    <h3> Messages </h3>
+    <h3> Messages with {{ receiver }} </h3>
 
     <br>
 
     {% for i in message %}
     <h6> {{ i.sender }} </h6>
     <p> {{ i.text }} </p>
+    {% if i.image %} 
+    <img src="{{ i.image.url }} " alt="image">
+    {% endif %}
     <p> {{ i.date }} </p>
+    {% if i.sender == request.user %}
     {% if i.read %} 
     <small> Seen </small>
     {% else %}
     <small> Delivered </small>
     {% endif %}
+    {% endif %}
+    <form action="{% url 'message_delete' user_id %}" method="POST"> 
+
+        {% csrf_token %}
+
+        <input type="hidden" name="message_id" value="{{ i.id }}">
+        <input type="submit" value="delete">
+    </form>
+    {% if i.sender == request.user %}
+    <form action="{% url 'message_update' user_id %}" method="POST" enctype="multipart/form-data"> 
+
+        {% csrf_token %}
+        
+        <input type="hidden" name="message_id" value="{{ i.id }}">
+        <input type="submit" value="update">
+    </form>
+    
+    
+    
+
+    {% endif %}
+   
     <hr>
     {% endfor %}
 
-    <form action="{% url 'message_view' user_id %}" method="POST">
+    <form action="{% url 'message_view' user_id %}" method="POST" enctype="multipart/form-data" >
 
         {% csrf_token %}
         {{ form.as_p}}
-
-        <input type="submit" value="send_message">
+        {% if update_status %} 
+        <input type="submit" value="Save Changes">
+        {% else %}
+        <input type="submit" value="Send message">
+        {% endif %}
 
     </form>
+
+    <br>
+    <br>
+    <br>
 
 
 </main>

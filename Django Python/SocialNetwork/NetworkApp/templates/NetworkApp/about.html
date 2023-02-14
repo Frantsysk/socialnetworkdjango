@@ -3,80 +3,84 @@
 
 {% load static %}
 
-    <!-- header area start -->
-    {% include 'NetworkApp/navigation.html' %}
-    <!-- header area end -->
-    <!-- header area start -->
-    {% include 'NetworkApp/navigation_mob.html' %}
-    <!-- header area end -->
+<!-- header area start -->
+{% include 'NetworkApp/navigation.html' %}
+<!-- header area end -->
+<!-- header area start -->
+{% include 'NetworkApp/navigation_mob.html' %}
+<!-- header area end -->
 
-    <main>
-        <div class="main-wrapper">
-            <!-- profile banner area start -->
-            <div class="profile-banner-large bg-img" data-bg=" {{ profile.cover_picture.url }}">
-            </div>
-            <!-- profile banner area end -->
+<main>
+    <div class="main-wrapper">
+        <!-- profile banner area start -->
+        <div class="profile-banner-large bg-img" data-bg=" {{ profile.cover_picture.url }}">
+        </div>
+        <!-- profile banner area end -->
 
-            <!-- profile menu area start -->
-            <div class="profile-menu-area secondary-navigation-style bg-white">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-lg-3 col-md-3">
-                            <div class="profile-picture-box">
-                                <figure class="profile-picture">
-                                    <a href="profile.html">
-                                        <img src=" {{ profile.picture.url }}" alt="profile picture" width="255px" height="270px"> 
-                                    </a>
-                                </figure>
+        <!-- profile menu area start -->
+        <div class="profile-menu-area secondary-navigation-style bg-white">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 col-md-3">
+                        <div class="profile-picture-box">
+                            <figure class="profile-picture">
+                                <a href="profile.html">
+                                    <img src=" {{ profile.picture.url }}" alt="profile picture" width="255px"
+                                        height="270px">
+                                </a>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 offset-lg-1">
+                        <div class="profile-menu-wrapper">
+                            <div class="main-menu-inner header-top-navigation">
+                                <nav>
+                                    <ul class="main-menu">
+                                        <li class="active"><a href="#">timeline</a></li>
+                                        <li><a href="about.html">about</a></li>
+                                        <li><a href="photos.html">photos</a></li>
+                                        <li><a href="friends.html">friends</a></li>
+                                        <li><a href="about.html">more</a></li>
+                                        <!-- <li class="d-inline-block d-md-none"><a href="profile.html">edit profile</a></li> -->
+                                    </ul>
+                                </nav>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-6 offset-lg-1">
-                            <div class="profile-menu-wrapper">
-                                <div class="main-menu-inner header-top-navigation">
-                                    <nav>
-                                        <ul class="main-menu">
-                                            <li class="active"><a href="#">timeline</a></li>
-                                            <li><a href="about.html">about</a></li>
-                                            <li><a href="photos.html">photos</a></li>
-                                            <li><a href="friends.html">friends</a></li>
-                                            <li><a href="about.html">more</a></li>
-                                            <!-- <li class="d-inline-block d-md-none"><a href="profile.html">edit profile</a></li> -->
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-3 d-none d-md-block">
-                            <div class="profile-edit-panel">
-                                <button class="edit-btn">edit profile</button>
-                            </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 d-none d-md-block">
+                        <div class="profile-edit-panel">
+                            <button class="edit-btn">edit profile</button>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- profile menu area end -->
+        </div>
+        <!-- profile menu area end -->
 
-            <!-- sendary menu start -->
-            <div class="menu-secondary">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="secondary-menu-wrapper bg-white">
-                                <div class="page-title-inner">
-                                    <h4 class="page-title">about</h4>
-                                </div>
-                                <div class="main-menu-inner header-top-navigation">
-                                    <nav>
-                                        <ul class="main-menu">
-                                            <li><a href=" {{ profile.facebook_url }}"><span>facebook</span> <i class="flaticon-facebook"></i></a></li>
-                                            <li><a href=" {{ profile.instagram_url }}"><span>instagram</span> <i class="flaticon-twitter-logo-silhouette"></i></a></li>
-                                            <li><a href=" {{ profile.google_url }}"><span>google</span> <i class="flaticon-google-plus"></i></a></li>
-                                            <!-- <li><a href="#"><span>pinterest</span> <i class="flaticon-pinterest"></i></a></li> -->
-                                            <!-- <li class="d-inline-block d-md-none"><a href="profile.html">edit profile</a></li> -->
-                                        </ul>
-                                    </nav>
-                                </div>
-                                <!-- <div class="post-settings-bar">
+        <!-- sendary menu start -->
+        <div class="menu-secondary">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="secondary-menu-wrapper bg-white">
+                            <div class="page-title-inner">
+                                <h4 class="page-title">about</h4>
+                            </div>
+                            <div class="main-menu-inner header-top-navigation">
+                                <nav>
+                                    <ul class="main-menu">
+                                        <li><a href=" {{ profile.facebook_url }}"><span>facebook</span> <i
+                                                    class="flaticon-facebook"></i></a></li>
+                                        <li><a href=" {{ profile.instagram_url }}"><span>instagram</span> <i
+                                                    class="flaticon-twitter-logo-silhouette"></i></a></li>
+                                        <li><a href=" {{ profile.google_url }}"><span>google</span> <i
+                                                    class="flaticon-google-plus"></i></a></li>
+                                        <!-- <li><a href="#"><span>pinterest</span> <i class="flaticon-pinterest"></i></a></li> -->
+                                        <!-- <li class="d-inline-block d-md-none"><a href="profile.html">edit profile</a></li> -->
+                                    </ul>
+                                </nav>
+                            </div>
+                            <!-- <div class="post-settings-bar">
                                     <span></span>
                                     <span></span>
                                     <span></span>
@@ -88,39 +92,40 @@
                                         </ul>
                                     </div>
                                 </div> -->
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- sendary menu end -->
+        </div>
+        <!-- sendary menu end -->
 
-            <!-- about author details start -->
-            <div class="about-author-details">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-3">
-                            <div class="card widget-item">
-                                <div class="about-me">
-                                    <ul class="nav flex-column about-author-menu">
-                                        <li><a href="#one" data-bs-toggle="tab" class="active">Something About Me</a></li>
-                                        <li><a href="#two" data-bs-toggle="tab">Working Zone</a></li>
-                                        <li><a href="#three" data-bs-toggle="tab">Educational Qualification</a></li>
-                                        <li><a href="#four" data-bs-toggle="tab">Work & Education</a></li>
-                                        <li><a href="#five" data-bs-toggle="tab">Friends & Family</a></li>
-                                        <li><a href="#six" data-bs-toggle="tab">Contact Details</a></li>
-                                    </ul>
-                                </div>
+        <!-- about author details start -->
+        <div class="about-author-details">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="card widget-item">
+                            <div class="about-me">
+                                <ul class="nav flex-column about-author-menu">
+                                    <li><a href="#one" data-bs-toggle="tab" class="active">Something About Me</a></li>
+                                    <li><a href="#two" data-bs-toggle="tab">Working Zone</a></li>
+                                    <li><a href="#three" data-bs-toggle="tab">Educational Qualification</a></li>
+                                    <li><a href="#four" data-bs-toggle="tab">Work & Education</a></li>
+                                    <li><a href="#five" data-bs-toggle="tab">Friends & Family</a></li>
+                                    <li><a href="#six" data-bs-toggle="tab">Contact Details</a></li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="col-lg-9">
-                            <div class="about-description">
-                                <div class="tab-content">
-                                    <div class="tab-pane fade active show" id="one">
-                                        <div class="work-zone">
-                                            <div class="author-desc-title d-flex">
-                                                <h6 class="author"><a href="profile.html"> {{ request.user.first_name }} {{ request.user.last_name }}</a></h6>
-                                                <!-- <div class="post-settings-bar">
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="about-description">
+                            <div class="tab-content">
+                                <div class="tab-pane fade active show" id="one">
+                                    <div class="work-zone">
+                                        <div class="author-desc-title d-flex">
+                                            <h6 class="author"><a href="profile.html"> {{ request.user.first_name }} {{
+                                                    request.user.last_name }}</a></h6>
+                                            <!-- <div class="post-settings-bar">
                                                     <span></span>
                                                     <span></span>
                                                     <span></span>
@@ -132,114 +137,153 @@
                                                         </ul>
                                                     </div>
                                                 </div> -->
-                                            </div>
-                                            <p> {{ profile.bio }} </p>
                                         </div>
+                                        <p> {{ profile.bio }} </p>
                                     </div>
-                                    <div class="tab-pane fade" id="two">
-                                        <div class="work-zone">
-                                            <div class="author-desc-title d-flex">
-                                                <h6 class="author"><a href="profile.html">Mili Raoulin</a></h6>
-                                                <div class="post-settings-bar">
-                                                    <span></span>
-                                                    <span></span>
-                                                    <span></span>
-                                                    <div class="post-settings arrow-shape">
-                                                        <ul>
-                                                            <li><button>copy link to adda</button></li>
-                                                            <li><button>edit post</button></li>
-                                                            <li><button>embed adda</button></li>
-                                                        </ul>
-                                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="two">
+                                    <div class="work-zone">
+                                        <div class="author-desc-title d-flex">
+                                            <h6 class="author"><a href="profile.html">Mili Raoulin</a></h6>
+                                            <div class="post-settings-bar">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <div class="post-settings arrow-shape">
+                                                    <ul>
+                                                        <li><button>copy link to adda</button></li>
+                                                        <li><button>edit post</button></li>
+                                                        <li><button>embed adda</button></li>
+                                                    </ul>
                                                 </div>
                                             </div>
-                                            <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
-                                            <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search</p>
                                         </div>
+                                        <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as
+                                            their default model text, and a search for 'lorem ipsum' will uncover many
+                                            web sites still in their infancy. Many desktop publishing packages and web
+                                            page editors now use Lorem Ipsum as their default model text, and a search
+                                            for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
+                                        <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as
+                                            their default model text, and a search for 'lorem ipsum' will uncover many
+                                            web sites still in their infancy. Many desktop publishing packages and web
+                                            page editors now use Lorem Ipsum as their default model text, and a search
+                                        </p>
                                     </div>
-                                    <div class="tab-pane fade" id="three">
-                                        <div class="work-zone">
-                                            <div class="author-desc-title d-flex">
-                                                <h6 class="author"><a href="profile.html">Mili Raoulin</a></h6>
-                                                <div class="post-settings-bar">
-                                                    <span></span>
-                                                    <span></span>
-                                                    <span></span>
-                                                    <div class="post-settings arrow-shape">
-                                                        <ul>
-                                                            <li><button>copy link to adda</button></li>
-                                                            <li><button>edit post</button></li>
-                                                            <li><button>embed adda</button></li>
-                                                        </ul>
-                                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="three">
+                                    <div class="work-zone">
+                                        <div class="author-desc-title d-flex">
+                                            <h6 class="author"><a href="profile.html">Mili Raoulin</a></h6>
+                                            <div class="post-settings-bar">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <div class="post-settings arrow-shape">
+                                                    <ul>
+                                                        <li><button>copy link to adda</button></li>
+                                                        <li><button>edit post</button></li>
+                                                        <li><button>embed adda</button></li>
+                                                    </ul>
                                                 </div>
                                             </div>
-                                            <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
-                                            <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search</p>
                                         </div>
+                                        <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as
+                                            their default model text, and a search for 'lorem ipsum' will uncover many
+                                            web sites still in their infancy. Many desktop publishing packages and web
+                                            page editors now use Lorem Ipsum as their default model text, and a search
+                                            for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
+                                        <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as
+                                            their default model text, and a search for 'lorem ipsum' will uncover many
+                                            web sites still in their infancy. Many desktop publishing packages and web
+                                            page editors now use Lorem Ipsum as their default model text, and a search
+                                        </p>
                                     </div>
-                                    <div class="tab-pane fade" id="four">
-                                        <div class="work-zone">
-                                            <div class="author-desc-title d-flex">
-                                                <h6 class="author"><a href="profile.html">Mili Raoulin</a></h6>
-                                                <div class="post-settings-bar">
-                                                    <span></span>
-                                                    <span></span>
-                                                    <span></span>
-                                                    <div class="post-settings arrow-shape">
-                                                        <ul>
-                                                            <li><button>copy link to adda</button></li>
-                                                            <li><button>edit post</button></li>
-                                                            <li><button>embed adda</button></li>
-                                                        </ul>
-                                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="four">
+                                    <div class="work-zone">
+                                        <div class="author-desc-title d-flex">
+                                            <h6 class="author"><a href="profile.html">Mili Raoulin</a></h6>
+                                            <div class="post-settings-bar">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <div class="post-settings arrow-shape">
+                                                    <ul>
+                                                        <li><button>copy link to adda</button></li>
+                                                        <li><button>edit post</button></li>
+                                                        <li><button>embed adda</button></li>
+                                                    </ul>
                                                 </div>
                                             </div>
-                                            <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
-                                            <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search</p>
                                         </div>
+                                        <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as
+                                            their default model text, and a search for 'lorem ipsum' will uncover many
+                                            web sites still in their infancy. Many desktop publishing packages and web
+                                            page editors now use Lorem Ipsum as their default model text, and a search
+                                            for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
+                                        <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as
+                                            their default model text, and a search for 'lorem ipsum' will uncover many
+                                            web sites still in their infancy. Many desktop publishing packages and web
+                                            page editors now use Lorem Ipsum as their default model text, and a search
+                                        </p>
                                     </div>
-                                    <div class="tab-pane fade" id="five">
-                                        <div class="work-zone">
-                                            <div class="author-desc-title d-flex">
-                                                <h6 class="author"><a href="profile.html">Mili Raoulin</a></h6>
-                                                <div class="post-settings-bar">
-                                                    <span></span>
-                                                    <span></span>
-                                                    <span></span>
-                                                    <div class="post-settings arrow-shape">
-                                                        <ul>
-                                                            <li><button>copy link to adda</button></li>
-                                                            <li><button>edit post</button></li>
-                                                            <li><button>embed adda</button></li>
-                                                        </ul>
-                                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="five">
+                                    <div class="work-zone">
+                                        <div class="author-desc-title d-flex">
+                                            <h6 class="author"><a href="profile.html">Mili Raoulin</a></h6>
+                                            <div class="post-settings-bar">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <div class="post-settings arrow-shape">
+                                                    <ul>
+                                                        <li><button>copy link to adda</button></li>
+                                                        <li><button>edit post</button></li>
+                                                        <li><button>embed adda</button></li>
+                                                    </ul>
                                                 </div>
                                             </div>
-                                            <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
-                                            <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search</p>
                                         </div>
+                                        <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as
+                                            their default model text, and a search for 'lorem ipsum' will uncover many
+                                            web sites still in their infancy. Many desktop publishing packages and web
+                                            page editors now use Lorem Ipsum as their default model text, and a search
+                                            for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
+                                        <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as
+                                            their default model text, and a search for 'lorem ipsum' will uncover many
+                                            web sites still in their infancy. Many desktop publishing packages and web
+                                            page editors now use Lorem Ipsum as their default model text, and a search
+                                        </p>
                                     </div>
-                                    <div class="tab-pane fade" id="six">
-                                        <div class="work-zone">
-                                            <div class="author-desc-title d-flex">
-                                                <h6 class="author"><a href="profile.html">Mili Raoulin</a></h6>
-                                                <div class="post-settings-bar">
-                                                    <span></span>
-                                                    <span></span>
-                                                    <span></span>
-                                                    <div class="post-settings arrow-shape">
-                                                        <ul>
-                                                            <li><button>copy link to adda</button></li>
-                                                            <li><button>edit post</button></li>
-                                                            <li><button>embed adda</button></li>
-                                                        </ul>
-                                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="six">
+                                    <div class="work-zone">
+                                        <div class="author-desc-title d-flex">
+                                            <h6 class="author"><a href="profile.html">Mili Raoulin</a></h6>
+                                            <div class="post-settings-bar">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                                <div class="post-settings arrow-shape">
+                                                    <ul>
+                                                        <li><button>copy link to adda</button></li>
+                                                        <li><button>edit post</button></li>
+                                                        <li><button>embed adda</button></li>
+                                                    </ul>
                                                 </div>
                                             </div>
-                                            <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
-                                            <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search</p>
                                         </div>
+                                        <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as
+                                            their default model text, and a search for 'lorem ipsum' will uncover many
+                                            web sites still in their infancy. Many desktop publishing packages and web
+                                            page editors now use Lorem Ipsum as their default model text, and a search
+                                            for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
+                                        <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as
+                                            their default model text, and a search for 'lorem ipsum' will uncover many
+                                            web sites still in their infancy. Many desktop publishing packages and web
+                                            page editors now use Lorem Ipsum as their default model text, and a search
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -247,589 +291,725 @@
                     </div>
                 </div>
             </div>
-            <!-- about author details start -->
+        </div>
+        <!-- about author details start -->
 
-            <!-- photo section start -->
-            <div class="photo-section">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="content-box">
-                                <h5 class="content-title">photos</h5>
-                                <div class="content-body">
-                                    <div class="row mt--30">
-                                        <div class="col-sm-6 col-md-4">
-                                            <div class="photo-group">
-                                                <div class="gallery-toggle">
-                                                    <div class="d-none product-thumb-large-view">
-                                                        <img src="assets/images/photos/photo-1.jpg" alt="Photo Gallery">
-                                                        <img src="assets/images/photos/photo-2.jpg" alt="Photo Gallery">
-                                                        <img src="assets/images/photos/photo-3.jpg" alt="Photo Gallery">
-                                                    </div>
-                                                    <div class="gallery-overlay">
-                                                        <img src="assets/images/photos/photo-1.jpg" alt="Photo Gallery">
-                                                        <div class="view-icon"></div>
-                                                    </div>
-                                                    <div class="photo-gallery-caption">
-                                                        <h3 class="photos-caption">office hangout (06)</h3>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 col-md-4">
-                                            <div class="photo-group">
-                                                <div class="gallery-toggle">
-                                                    <div class="d-none product-thumb-large-view">
-                                                        <img src="assets/images/photos/photo-2.jpg" alt="Photo Gallery">
-                                                        <img src="assets/images/photos/photo-5.jpg" alt="Photo Gallery">
-                                                        <img src="assets/images/photos/photo-6.jpg" alt="Photo Gallery">
-                                                    </div>
-                                                    <div class="gallery-overlay">
-                                                        <img src="assets/images/photos/photo-2.jpg" alt="Photo Gallery">
-                                                        <div class="view-icon"></div>
-                                                    </div>
-                                                    <div class="photo-gallery-caption">
-                                                        <h3 class="photos-caption">dream land (12)</h3>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 col-md-4">
-                                            <div class="photo-group">
-                                                <div class="gallery-toggle">
-                                                    <div class="d-none product-thumb-large-view">
-                                                        <img src="assets/images/photos/photo-3.jpg" alt="Photo Gallery">
-                                                        <img src="assets/images/photos/photo-6.jpg" alt="Photo Gallery">
-                                                        <img src="assets/images/photos/photo-2.jpg" alt="Photo Gallery">
-                                                    </div>
-                                                    <div class="gallery-overlay">
-                                                        <img src="assets/images/photos/photo-3.jpg" alt="Photo Gallery">
-                                                        <div class="view-icon"></div>
-                                                    </div>
-                                                    <div class="photo-gallery-caption">
-                                                        <h3 class="photos-caption">travel zone (34)</h3>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 col-md-4">
-                                            <div class="photo-group">
-                                                <div class="gallery-toggle">
-                                                    <div class="d-none product-thumb-large-view">
-                                                        <img src="assets/images/photos/photo-4.jpg" alt="Photo Gallery">
-                                                        <img src="assets/images/photos/photo-1.jpg" alt="Photo Gallery">
-                                                        <img src="assets/images/photos/photo-2.jpg" alt="Photo Gallery">
-                                                    </div>
-                                                    <div class="gallery-overlay">
-                                                        <img src="assets/images/photos/photo-4.jpg" alt="Photo Gallery">
-                                                        <div class="view-icon"></div>
-                                                    </div>
-                                                    <div class="photo-gallery-caption">
-                                                        <h3 class="photos-caption">pure nature (17)</h3>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 col-md-4">
-                                            <div class="photo-group">
-                                                <div class="gallery-toggle">
-                                                    <div class="d-none product-thumb-large-view">
-                                                        <img src="assets/images/photos/photo-5.jpg" alt="Photo Gallery">
-                                                        <img src="assets/images/photos/photo-4.jpg" alt="Photo Gallery">
-                                                        <img src="assets/images/photos/photo-2.jpg" alt="Photo Gallery">
-                                                    </div>
-                                                    <div class="gallery-overlay">
-                                                        <img src="assets/images/photos/photo-5.jpg" alt="Photo Gallery">
-                                                        <div class="view-icon"></div>
-                                                    </div>
-                                                    <div class="photo-gallery-caption">
-                                                        <h3 class="photos-caption">family tour (37)</h3>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 col-md-4">
-                                            <div class="photo-group">
-                                                <div class="gallery-toggle">
-                                                    <div class="d-none product-thumb-large-view">
-                                                        <img src="assets/images/photos/photo-6.jpg" alt="Photo Gallery">
-                                                        <img src="assets/images/photos/photo-3.jpg" alt="Photo Gallery">
-                                                        <img src="assets/images/photos/photo-2.jpg" alt="Photo Gallery">
-                                                    </div>
-                                                    <div class="gallery-overlay">
-                                                        <img src="assets/images/photos/photo-6.jpg" alt="Photo Gallery">
-                                                        <div class="view-icon"></div>
-                                                    </div>
-                                                    <div class="photo-gallery-caption">
-                                                        <h3 class="photos-caption">chill zone (06)</h3>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="load-more text-center">
-                                                <button class="load-more-btn">load more</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="photo-section" style="margin-left: 800px; margin-bottom: 300px;">
+
+            
+
+            <br>
+            {% if not comment_page %}
+
+            <h3> Posts</h3>
+            <br>
+
+            <form method="POST" enctype="multipart/form-data">
+
+                {% csrf_token %}
+                {{ form.as_p}}
+                {% if update_status %}
+                <input type="hidden" name="post_id" value="{{ post_id }}">
+                <input type="submit" value="Save Changes" formaction="{% url 'post_update' %}">
+                {% else %}
+                <input formaction="{% url 'create_post' %}" type="submit" value="Create post">
+                {% endif %}
+
+            </form>
+
+            {% endif %}
+
+            <hr>
+            <div>
+                {% for post in posts %}
+                <br>
+                <h5> {{ post.title }} </h5>
+                {{ post.content }}
+                <br>
+                {% if post.image %}
+                <img src="{{ post.image.url }} " alt="image">
+                {% endif %}
+                <br>
+                {{ post.owner }}
+                <br>
+                {{ post.created_at }}
+                <br>
+                <br>
+
+                <form action="{% url 'post_update' %}" method="POST" enctype="multipart/form-data">
+
+                    {% csrf_token %}
+
+                    <input type="hidden" name="post_id" value="{{ post.id }}">
+                    <input type="submit" value="update">
+                </form>
+
+                <br>
+
+                <form action="{% url 'delete_post' %}" method="POST">
+
+                    {% csrf_token %}
+
+                    <input type="hidden" name="post_id" value="{{ post.id }}">
+                    <input type="submit" value="delete">
+                </form>
+
+                <br>
+
+                <form action="{% url 'create_comment' post.id %}"> <button type="submit" > Post comment </button> </form>
+
+
+                <hr>
+
+                <h5> Comments </h5>
+
+                <hr>
+
+                <ul>
+                    {% for comment in post.comments.all %}
+                    <li>
+                        {{ comment.content }}
+                        <br>
+                        {{ comment.owner }}
+                        <br>
+                        {{ comment.created_at }}
+                    </li>
+                    {% if request.user == comment.owner or request.user == post.owner %}
+                    <a href="{% url 'delete_comment' post.id comment.id %}"> delete </a>
+                    {% endif %}
+                    <hr>
+                    {% endfor %}
+                </ul>
+
+
+                {% endfor %}
+
+                {% if comment_page %}
+
+                <h3> Comments </h3>
+                <form method="POST" enctype="multipart/form-data">
+
+                    {% csrf_token %}
+                    {{ form.as_p}}
+                    {% if update_status %}
+                    <input type="hidden" name="comment_id" value="{{ comment_id }}">
+                    <input type="submit" value="Save Changes" formaction="{% url 'comment_update' %}">
+                    {% else %}
+                    <input formaction="{% url 'create_comment' post_id %}" type="submit" value="Post comment">
+                    {% endif %}
+
+                </form>
+                {% endif %}
+
+
             </div>
-            <!-- photo section end -->
-
-            <!-- photo section start -->
-            <div class="friends-section">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="content-box">
-                                <h5 class="content-title">friends</h5>
-                                <div class="content-body">
-                                    <div class="row mt--20">
-                                        {% for friend in friends %}
-                                        <div class="col-lg-3 col-sm-6">
-                                            <div class="friend-list-view">
-                                                <!-- profile picture end -->
-                                                <div class="profile-thumb">
-                                                    <a href="#">
-                                                        <figure class="profile-thumb-middle">
-                                                            <img src="{{ friend.profile.picture.url }}" alt="profile picture">
-                                                        </figure>
-                                                    </a>
-                                                </div>
-                                                <!-- profile picture end -->
-
-                                                <div class="posted-author">
-                                                    <h6 class="author"><a href="{% url 'user_about' friend.id %}"> {{ friend.first_name }} {{ friend.last_name }} </a></h6>
-                                                    <a class="add-frnd" href="{% url 'delete_friend' friend.id %}">delete friend</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        {% endfor %}
-                                        <div class="col-12">
-                                            <div class="load-more text-center">
-                                                <button class="load-more-btn">load more</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- photo section end -->
-
-            <!-- favorite book section start -->
-            <div class="faborite-books">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="content-box">
-                                <h5 class="content-title">favorite books</h5>
-                                <div class="content-body">
-                                    <div class="row favorite-item-carousel">
-                                        <div class="col">
-                                            <figure class="favorite-item">
-                                                <a href="#">
-                                                    <img src="assets/images/books/book-1.jpg" alt="">
-                                                </a>
-                                            </figure>
-                                        </div>
-                                        <div class="col">
-                                            <figure class="favorite-item">
-                                                <a href="#">
-                                                    <img src="assets/images/books/book-2.jpg" alt="">
-                                                </a>
-                                            </figure>
-                                        </div>
-                                        <div class="col">
-                                            <figure class="favorite-item">
-                                                <a href="#">
-                                                    <img src="assets/images/books/book-3.jpg" alt="">
-                                                </a>
-                                            </figure>
-                                        </div>
-                                        <div class="col">
-                                            <figure class="favorite-item">
-                                                <a href="#">
-                                                    <img src="assets/images/books/book-4.jpg" alt="">
-                                                </a>
-                                            </figure>
-                                        </div>
-                                        <div class="col">
-                                            <figure class="favorite-item">
-                                                <a href="#">
-                                                    <img src="assets/images/books/book-5.jpg" alt="">
-                                                </a>
-                                            </figure>
-                                        </div>
-                                        <div class="col">
-                                            <figure class="favorite-item">
-                                                <a href="#">
-                                                    <img src="assets/images/books/book-6.jpg" alt="">
-                                                </a>
-                                            </figure>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <div class="load-more text-center">
-                                                <button class="load-more-btn">load more</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- favorite book section end -->
-
-            <!-- favorite book section start -->
-            <div class="faborite-books">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="content-box">
-                                <h5 class="content-title">favorite sports</h5>
-                                <div class="content-body">
-                                    <div class="row favorite-item-carousel">
-                                        <div class="col">
-                                            <figure class="favorite-item">
-                                                <a href="#">
-                                                    <img src="assets/images/sports/sport-1.jpg" alt="">
-                                                </a>
-                                            </figure>
-                                        </div>
-                                        <div class="col">
-                                            <figure class="favorite-item">
-                                                <a href="#">
-                                                    <img src="assets/images/sports/sport-2.jpg" alt="">
-                                                </a>
-                                            </figure>
-                                        </div>
-                                        <div class="col">
-                                            <figure class="favorite-item">
-                                                <a href="#">
-                                                    <img src="assets/images/sports/sport-3.jpg" alt="">
-                                                </a>
-                                            </figure>
-                                        </div>
-                                        <div class="col">
-                                            <figure class="favorite-item">
-                                                <a href="#">
-                                                    <img src="assets/images/sports/sport-4.jpg" alt="">
-                                                </a>
-                                            </figure>
-                                        </div>
-                                        <div class="col">
-                                            <figure class="favorite-item">
-                                                <a href="#">
-                                                    <img src="assets/images/sports/sport-5.jpg" alt="">
-                                                </a>
-                                            </figure>
-                                        </div>
-                                        <div class="col">
-                                            <figure class="favorite-item">
-                                                <a href="#">
-                                                    <img src="assets/images/sports/sport-6.jpg" alt="">
-                                                </a>
-                                            </figure>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <div class="load-more text-center">
-                                                <button class="load-more-btn">load more</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- favorite book section end -->
         </div>
 
-    </main>
-
-    <!-- Scroll to top start -->
-    <div class="scroll-top not-visible">
-        <i class="bi bi-finger-index"></i>
-    </div>
-    <!-- Scroll to Top End -->
-
-    <!-- footer area start -->
-    <footer class="d-none d-lg-block">
-        <div class="footer-area reveal-footer">
-            <div class="container-fluid">
+        <!-- photo section start -->
+        <div class="photo-section">
+            <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <div class="footer-wrapper">
-                            <div class="footer-card position-relative">
-                                <div class="friends-search">
-                                    <form class="search-box">
-                                        <input type="text" placeholder="Search Your Friends" class="search-field">
-                                        <button class="search-btn"><i class="flaticon-search"></i></button>
-                                    </form>
-                                </div>
-                                <div class="friend-search-list">
-                                    <div class="frnd-search-title">
-                                        <button class="frnd-search-icon"><i class="flaticon-settings"></i></button>
-                                        <p>search friends</p>
-                                        <button class="close-btn" data-close="friend-search-list"><i class="flaticon-cross-out"></i></button>
+                        <div class="content-box">
+                            <h5 class="content-title">photos</h5>
+                            <div class="content-body">
+                                <div class="row mt--30">
+                                    <div class="col-sm-6 col-md-4">
+                                        <div class="photo-group">
+                                            <div class="gallery-toggle">
+                                                <div class="d-none product-thumb-large-view">
+                                                    <img src="assets/images/photos/photo-1.jpg" alt="Photo Gallery">
+                                                    <img src="assets/images/photos/photo-2.jpg" alt="Photo Gallery">
+                                                    <img src="assets/images/photos/photo-3.jpg" alt="Photo Gallery">
+                                                </div>
+                                                <div class="gallery-overlay">
+                                                    <img src="assets/images/photos/photo-1.jpg" alt="Photo Gallery">
+                                                    <div class="view-icon"></div>
+                                                </div>
+                                                <div class="photo-gallery-caption">
+                                                    <h3 class="photos-caption">office hangout (06)</h3>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="frnd-search-inner custom-scroll">
-                                        <ul>
-                                            {% for friend in users %} 
-                                            <li class="d-flex align-items-center profile-active">
-                                                <!-- profile picture end -->
-                                                <div class="profile-thumb active">
-                                                    <a href="#">
-                                                        <figure class="profile-thumb-small">
-                                                            <img src="{{ friend.profile.picture.url }}" alt="profile picture">
-                                                        </figure>
-                                                    </a>
+                                    <div class="col-sm-6 col-md-4">
+                                        <div class="photo-group">
+                                            <div class="gallery-toggle">
+                                                <div class="d-none product-thumb-large-view">
+                                                    <img src="assets/images/photos/photo-2.jpg" alt="Photo Gallery">
+                                                    <img src="assets/images/photos/photo-5.jpg" alt="Photo Gallery">
+                                                    <img src="assets/images/photos/photo-6.jpg" alt="Photo Gallery">
                                                 </div>
-                                                <!-- profile picture end -->
-
-                                                <div class="posted-author">
-                                                    <h6 class="author"><a href="profile.html"> {{ friend.first_name }} {{ friend.last_name }}</a></h6>
-                                                    <a class="add-frnd" href="{% url 'add_friend' friend.id %}" >add friend</a>
+                                                <div class="gallery-overlay">
+                                                    <img src="assets/images/photos/photo-2.jpg" alt="Photo Gallery">
+                                                    <div class="view-icon"></div>
                                                 </div>
-                                            </li> 
-                                            {% endfor %}                              
-                                           
-
-                                                                                     
-                                        </ul>
+                                                <div class="photo-gallery-caption">
+                                                    <h3 class="photos-caption">dream land (12)</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4">
+                                        <div class="photo-group">
+                                            <div class="gallery-toggle">
+                                                <div class="d-none product-thumb-large-view">
+                                                    <img src="assets/images/photos/photo-3.jpg" alt="Photo Gallery">
+                                                    <img src="assets/images/photos/photo-6.jpg" alt="Photo Gallery">
+                                                    <img src="assets/images/photos/photo-2.jpg" alt="Photo Gallery">
+                                                </div>
+                                                <div class="gallery-overlay">
+                                                    <img src="assets/images/photos/photo-3.jpg" alt="Photo Gallery">
+                                                    <div class="view-icon"></div>
+                                                </div>
+                                                <div class="photo-gallery-caption">
+                                                    <h3 class="photos-caption">travel zone (34)</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4">
+                                        <div class="photo-group">
+                                            <div class="gallery-toggle">
+                                                <div class="d-none product-thumb-large-view">
+                                                    <img src="assets/images/photos/photo-4.jpg" alt="Photo Gallery">
+                                                    <img src="assets/images/photos/photo-1.jpg" alt="Photo Gallery">
+                                                    <img src="assets/images/photos/photo-2.jpg" alt="Photo Gallery">
+                                                </div>
+                                                <div class="gallery-overlay">
+                                                    <img src="assets/images/photos/photo-4.jpg" alt="Photo Gallery">
+                                                    <div class="view-icon"></div>
+                                                </div>
+                                                <div class="photo-gallery-caption">
+                                                    <h3 class="photos-caption">pure nature (17)</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4">
+                                        <div class="photo-group">
+                                            <div class="gallery-toggle">
+                                                <div class="d-none product-thumb-large-view">
+                                                    <img src="assets/images/photos/photo-5.jpg" alt="Photo Gallery">
+                                                    <img src="assets/images/photos/photo-4.jpg" alt="Photo Gallery">
+                                                    <img src="assets/images/photos/photo-2.jpg" alt="Photo Gallery">
+                                                </div>
+                                                <div class="gallery-overlay">
+                                                    <img src="assets/images/photos/photo-5.jpg" alt="Photo Gallery">
+                                                    <div class="view-icon"></div>
+                                                </div>
+                                                <div class="photo-gallery-caption">
+                                                    <h3 class="photos-caption">family tour (37)</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-4">
+                                        <div class="photo-group">
+                                            <div class="gallery-toggle">
+                                                <div class="d-none product-thumb-large-view">
+                                                    <img src="assets/images/photos/photo-6.jpg" alt="Photo Gallery">
+                                                    <img src="assets/images/photos/photo-3.jpg" alt="Photo Gallery">
+                                                    <img src="assets/images/photos/photo-2.jpg" alt="Photo Gallery">
+                                                </div>
+                                                <div class="gallery-overlay">
+                                                    <img src="assets/images/photos/photo-6.jpg" alt="Photo Gallery">
+                                                    <div class="view-icon"></div>
+                                                </div>
+                                                <div class="photo-gallery-caption">
+                                                    <h3 class="photos-caption">chill zone (06)</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="load-more text-center">
+                                            <button class="load-more-btn">load more</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="card card-small mb-0 active-profile-wrapper">
-                                <div class="active-profiles-wrapper">
-                                    <div class="active-profile-carousel slick-row-20 slick-arrow-style">
-                                        <!-- profile picture end -->
-                                        <div class="single-slide">
-                                            <div class="profile-thumb active profile-active">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- photo section end -->
+
+        <!-- photo section start -->
+        <div class="friends-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="content-box">
+                            <h5 class="content-title">friends</h5>
+                            <div class="content-body">
+                                <div class="row mt--20">
+                                    {% for friend in friends %}
+                                    <div class="col-lg-3 col-sm-6">
+                                        <div class="friend-list-view">
+                                            <!-- profile picture end -->
+                                            <div class="profile-thumb">
                                                 <a href="#">
-                                                    <figure class="profile-thumb-small">
-                                                        <img src="assets/images/profile/profile-35x35-1.jpg" alt="profile picture">
+                                                    <figure class="profile-thumb-middle">
+                                                        <img src="{{ friend.profile.picture.url }}"
+                                                            alt="profile picture">
                                                     </figure>
                                                 </a>
                                             </div>
-                                        </div>
-                                        <!-- profile picture end -->
+                                            <!-- profile picture end -->
 
-                                        <!-- profile picture end -->
-                                        <div class="single-slide">
-                                            <div class="profile-thumb active profile-active">
-                                                <a href="javascript:void(0)">
-                                                    <figure class="profile-thumb-small">
-                                                        <img src="assets/images/profile/profile-35x35-2.jpg" alt="profile picture">
-                                                    </figure>
-                                                </a>
+                                            <div class="posted-author">
+                                                <h6 class="author"><a href="{% url 'user_about' friend.id %}"> {{
+                                                        friend.first_name }} {{ friend.last_name }} </a></h6>
+                                                <a class="add-frnd" href="{% url 'delete_friend' friend.id %}">delete
+                                                    friend</a>
                                             </div>
                                         </div>
-                                        <!-- profile picture end -->
-
-                                        <!-- profile picture end -->
-                                        <div class="single-slide">
-                                            <div class="profile-thumb active profile-active">
-                                                <a href="javascript:void(0)">
-                                                    <figure class="profile-thumb-small">
-                                                        <img src="assets/images/profile/profile-35x35-3.jpg" alt="profile picture">
-                                                    </figure>
-                                                </a>
-                                            </div>
+                                    </div>
+                                    {% endfor %}
+                                    <div class="col-12">
+                                        <div class="load-more text-center">
+                                            <button class="load-more-btn">load more</button>
                                         </div>
-                                        <!-- profile picture end -->
-
-                                        <!-- profile picture end -->
-                                        <div class="single-slide">
-                                            <div class="profile-thumb active profile-active">
-                                                <a href="javascript:void(0)">
-                                                    <figure class="profile-thumb-small">
-                                                        <img src="assets/images/profile/profile-35x35-4.jpg" alt="profile picture">
-                                                    </figure>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <!-- profile picture end -->
-
-                                        <!-- profile picture end -->
-                                        <div class="single-slide">
-                                            <div class="profile-thumb active profile-active">
-                                                <a href="javascript:void(0)">
-                                                    <figure class="profile-thumb-small">
-                                                        <img src="assets/images/profile/profile-35x35-5.jpg" alt="profile picture">
-                                                    </figure>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <!-- profile picture end -->
-
-                                        <!-- profile picture end -->
-                                        <div class="single-slide">
-                                            <div class="profile-thumb active profile-active">
-                                                <a href="javascript:void(0)">
-                                                    <figure class="profile-thumb-small">
-                                                        <img src="assets/images/profile/profile-35x35-6.jpg" alt="profile picture">
-                                                    </figure>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <!-- profile picture end -->
-
-                                        <!-- profile picture end -->
-                                        <div class="single-slide">
-                                            <div class="profile-thumb active profile-active">
-                                                <a href="javascript:void(0)">
-                                                    <figure class="profile-thumb-small">
-                                                        <img src="assets/images/profile/profile-35x35-7.jpg" alt="profile picture">
-                                                    </figure>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <!-- profile picture end -->
-
-                                        <!-- profile picture end -->
-                                        <div class="single-slide">
-                                            <div class="profile-thumb active profile-active">
-                                                <a href="javascript:void(0)">
-                                                    <figure class="profile-thumb-small">
-                                                        <img src="assets/images/profile/profile-35x35-8.jpg" alt="profile picture">
-                                                    </figure>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <!-- profile picture end -->
-
-                                        <!-- profile picture end -->
-                                        <div class="single-slide">
-                                            <div class="profile-thumb active profile-active">
-                                                <a href="javascript:void(0)">
-                                                    <figure class="profile-thumb-small">
-                                                        <img src="assets/images/profile/profile-35x35-9.jpg" alt="profile picture">
-                                                    </figure>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <!-- profile picture end -->
-
-                                        <!-- profile picture end -->
-                                        <div class="single-slide">
-                                            <div class="profile-thumb active profile-active">
-                                                <a href="javascript:void(0)">
-                                                    <figure class="profile-thumb-small">
-                                                        <img src="assets/images/profile/profile-35x35-10.jpg" alt="profile picture">
-                                                    </figure>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <!-- profile picture end -->
-
-                                        <!-- profile picture end -->
-                                        <div class="single-slide">
-                                            <div class="profile-thumb active profile-active">
-                                                <a href="javascript:void(0)">
-                                                    <figure class="profile-thumb-small">
-                                                        <img src="assets/images/profile/profile-35x35-11.jpg" alt="profile picture">
-                                                    </figure>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <!-- profile picture end -->
-
-                                        <!-- profile picture end -->
-                                        <div class="single-slide">
-                                            <div class="profile-thumb active profile-active">
-                                                <a href="javascript:void(0)">
-                                                    <figure class="profile-thumb-small">
-                                                        <img src="assets/images/profile/profile-35x35-12.jpg" alt="profile picture">
-                                                    </figure>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <!-- profile picture end -->
-
-                                        <!-- profile picture end -->
-                                        <div class="single-slide">
-                                            <div class="profile-thumb active profile-active">
-                                                <a href="javascript:void(0)">
-                                                    <figure class="profile-thumb-small">
-                                                        <img src="assets/images/profile/profile-35x35-13.jpg" alt="profile picture">
-                                                    </figure>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <!-- profile picture end -->
                                     </div>
                                 </div>
                             </div>
-                            <div class="footer-card position-relative">
-                                <div class="live-chat-inner">
-                                    <div class="chat-text-field">
-                                        <textarea class="live-chat-field custom-scroll" placeholder="Text Message"></textarea>
-                                        <button class="chat-message-send" type="submit" value="submit">
-                                            <img src="assets/images/icons/plane.png" alt="">
-                                        </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- photo section end -->
+
+        <!-- favorite book section start -->
+        <div class="faborite-books">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="content-box">
+                            <h5 class="content-title">favorite books</h5>
+                            <div class="content-body">
+                                <div class="row favorite-item-carousel">
+                                    <div class="col">
+                                        <figure class="favorite-item">
+                                            <a href="#">
+                                                <img src="assets/images/books/book-1.jpg" alt="">
+                                            </a>
+                                        </figure>
                                     </div>
-                                    <div class="chat-output-box">
-                                        <div class="live-chat-title">
+                                    <div class="col">
+                                        <figure class="favorite-item">
+                                            <a href="#">
+                                                <img src="assets/images/books/book-2.jpg" alt="">
+                                            </a>
+                                        </figure>
+                                    </div>
+                                    <div class="col">
+                                        <figure class="favorite-item">
+                                            <a href="#">
+                                                <img src="assets/images/books/book-3.jpg" alt="">
+                                            </a>
+                                        </figure>
+                                    </div>
+                                    <div class="col">
+                                        <figure class="favorite-item">
+                                            <a href="#">
+                                                <img src="assets/images/books/book-4.jpg" alt="">
+                                            </a>
+                                        </figure>
+                                    </div>
+                                    <div class="col">
+                                        <figure class="favorite-item">
+                                            <a href="#">
+                                                <img src="assets/images/books/book-5.jpg" alt="">
+                                            </a>
+                                        </figure>
+                                    </div>
+                                    <div class="col">
+                                        <figure class="favorite-item">
+                                            <a href="#">
+                                                <img src="assets/images/books/book-6.jpg" alt="">
+                                            </a>
+                                        </figure>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="load-more text-center">
+                                            <button class="load-more-btn">load more</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- favorite book section end -->
+
+        <!-- favorite book section start -->
+        <div class="faborite-books">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="content-box">
+                            <h5 class="content-title">favorite sports</h5>
+                            <div class="content-body">
+                                <div class="row favorite-item-carousel">
+                                    <div class="col">
+                                        <figure class="favorite-item">
+                                            <a href="#">
+                                                <img src="assets/images/sports/sport-1.jpg" alt="">
+                                            </a>
+                                        </figure>
+                                    </div>
+                                    <div class="col">
+                                        <figure class="favorite-item">
+                                            <a href="#">
+                                                <img src="assets/images/sports/sport-2.jpg" alt="">
+                                            </a>
+                                        </figure>
+                                    </div>
+                                    <div class="col">
+                                        <figure class="favorite-item">
+                                            <a href="#">
+                                                <img src="assets/images/sports/sport-3.jpg" alt="">
+                                            </a>
+                                        </figure>
+                                    </div>
+                                    <div class="col">
+                                        <figure class="favorite-item">
+                                            <a href="#">
+                                                <img src="assets/images/sports/sport-4.jpg" alt="">
+                                            </a>
+                                        </figure>
+                                    </div>
+                                    <div class="col">
+                                        <figure class="favorite-item">
+                                            <a href="#">
+                                                <img src="assets/images/sports/sport-5.jpg" alt="">
+                                            </a>
+                                        </figure>
+                                    </div>
+                                    <div class="col">
+                                        <figure class="favorite-item">
+                                            <a href="#">
+                                                <img src="assets/images/sports/sport-6.jpg" alt="">
+                                            </a>
+                                        </figure>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="load-more text-center">
+                                            <button class="load-more-btn">load more</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- favorite book section end -->
+    </div>
+
+</main>
+
+<!-- Scroll to top start -->
+<div class="scroll-top not-visible">
+    <i class="bi bi-finger-index"></i>
+</div>
+<!-- Scroll to Top End -->
+
+<!-- footer area start -->
+<footer class="d-none d-lg-block">
+    <div class="footer-area reveal-footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="footer-wrapper">
+                        <div class="footer-card position-relative">
+                            <div class="friends-search">
+                                <form class="search-box">
+                                    <input type="text" placeholder="Search Your Friends" class="search-field">
+                                    <button class="search-btn"><i class="flaticon-search"></i></button>
+                                </form>
+                            </div>
+                            <div class="friend-search-list">
+                                <div class="frnd-search-title">
+                                    <button class="frnd-search-icon"><i class="flaticon-settings"></i></button>
+                                    <p>search friends</p>
+                                    <button class="close-btn" data-close="friend-search-list"><i
+                                            class="flaticon-cross-out"></i></button>
+                                </div>
+                                <div class="frnd-search-inner custom-scroll">
+                                    <ul>
+                                        {% for friend in users %}
+                                        <li class="d-flex align-items-center profile-active">
                                             <!-- profile picture end -->
                                             <div class="profile-thumb active">
                                                 <a href="#">
                                                     <figure class="profile-thumb-small">
-                                                        <img src="assets/images/profile/profile-35x35-13.jpg" alt="profile picture">
+                                                        <img src="{{ friend.profile.picture.url }}"
+                                                            alt="profile picture">
                                                     </figure>
                                                 </a>
                                             </div>
                                             <!-- profile picture end -->
+
                                             <div class="posted-author">
-                                                <h6 class="author"><a href="profile.html">Robart Marloyan</a></h6>
-                                                <span class="active-pro">active now</span>
+                                                <h6 class="author"><a href="profile.html"> {{ friend.first_name }} {{
+                                                        friend.last_name }}</a></h6>
+                                                <a class="add-frnd" href="{% url 'add_friend' friend.id %}">add
+                                                    friend</a>
                                             </div>
-                                            <div class="live-chat-settings ms-auto">
-                                                <button class="chat-settings"><i class="flaticon-settings"></i></button>
-                                                <button class="close-btn" data-close="chat-output-box"><i class="flaticon-cross-out"></i></button>
-                                            </div>
+                                        </li>
+                                        {% endfor %}
+
+
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card-small mb-0 active-profile-wrapper">
+                            <div class="active-profiles-wrapper">
+                                <div class="active-profile-carousel slick-row-20 slick-arrow-style">
+                                    <!-- profile picture end -->
+                                    <div class="single-slide">
+                                        <div class="profile-thumb active profile-active">
+                                            <a href="#">
+                                                <figure class="profile-thumb-small">
+                                                    <img src="assets/images/profile/profile-35x35-1.jpg"
+                                                        alt="profile picture">
+                                                </figure>
+                                            </a>
                                         </div>
-                                        <div class="message-list-inner">
-                                            <ul class="message-list custom-scroll">
-                                                <li class="text-friends">
-                                                    <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text</p>
-                                                    <div class="message-time">10 minute ago</div>
-                                                </li>
-                                                <li class="text-author">
-                                                    <p>Many desktop publishing packages and web page editors</p>
-                                                    <div class="message-time">5 minute ago</div>
-                                                </li>
-                                                <li class="text-friends">
-                                                    <p>packages and web page editors </p>
-                                                    <div class="message-time">2 minute ago</div>
-                                                </li>
-                                                <li class="text-friends">
-                                                    <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text</p>
-                                                    <div class="message-time">10 minute ago</div>
-                                                </li>
-                                                <li class="text-author">
-                                                    <p>Many desktop publishing packages and web page editors</p>
-                                                    <div class="message-time">5 minute ago</div>
-                                                </li>
-                                                <li class="text-friends">
-                                                    <p>packages and web page editors </p>
-                                                    <div class="message-time">2 minute ago</div>
-                                                </li>
-                                            </ul>
+                                    </div>
+                                    <!-- profile picture end -->
+
+                                    <!-- profile picture end -->
+                                    <div class="single-slide">
+                                        <div class="profile-thumb active profile-active">
+                                            <a href="javascript:void(0)">
+                                                <figure class="profile-thumb-small">
+                                                    <img src="assets/images/profile/profile-35x35-2.jpg"
+                                                        alt="profile picture">
+                                                </figure>
+                                            </a>
                                         </div>
+                                    </div>
+                                    <!-- profile picture end -->
+
+                                    <!-- profile picture end -->
+                                    <div class="single-slide">
+                                        <div class="profile-thumb active profile-active">
+                                            <a href="javascript:void(0)">
+                                                <figure class="profile-thumb-small">
+                                                    <img src="assets/images/profile/profile-35x35-3.jpg"
+                                                        alt="profile picture">
+                                                </figure>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- profile picture end -->
+
+                                    <!-- profile picture end -->
+                                    <div class="single-slide">
+                                        <div class="profile-thumb active profile-active">
+                                            <a href="javascript:void(0)">
+                                                <figure class="profile-thumb-small">
+                                                    <img src="assets/images/profile/profile-35x35-4.jpg"
+                                                        alt="profile picture">
+                                                </figure>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- profile picture end -->
+
+                                    <!-- profile picture end -->
+                                    <div class="single-slide">
+                                        <div class="profile-thumb active profile-active">
+                                            <a href="javascript:void(0)">
+                                                <figure class="profile-thumb-small">
+                                                    <img src="assets/images/profile/profile-35x35-5.jpg"
+                                                        alt="profile picture">
+                                                </figure>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- profile picture end -->
+
+                                    <!-- profile picture end -->
+                                    <div class="single-slide">
+                                        <div class="profile-thumb active profile-active">
+                                            <a href="javascript:void(0)">
+                                                <figure class="profile-thumb-small">
+                                                    <img src="assets/images/profile/profile-35x35-6.jpg"
+                                                        alt="profile picture">
+                                                </figure>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- profile picture end -->
+
+                                    <!-- profile picture end -->
+                                    <div class="single-slide">
+                                        <div class="profile-thumb active profile-active">
+                                            <a href="javascript:void(0)">
+                                                <figure class="profile-thumb-small">
+                                                    <img src="assets/images/profile/profile-35x35-7.jpg"
+                                                        alt="profile picture">
+                                                </figure>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- profile picture end -->
+
+                                    <!-- profile picture end -->
+                                    <div class="single-slide">
+                                        <div class="profile-thumb active profile-active">
+                                            <a href="javascript:void(0)">
+                                                <figure class="profile-thumb-small">
+                                                    <img src="assets/images/profile/profile-35x35-8.jpg"
+                                                        alt="profile picture">
+                                                </figure>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- profile picture end -->
+
+                                    <!-- profile picture end -->
+                                    <div class="single-slide">
+                                        <div class="profile-thumb active profile-active">
+                                            <a href="javascript:void(0)">
+                                                <figure class="profile-thumb-small">
+                                                    <img src="assets/images/profile/profile-35x35-9.jpg"
+                                                        alt="profile picture">
+                                                </figure>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- profile picture end -->
+
+                                    <!-- profile picture end -->
+                                    <div class="single-slide">
+                                        <div class="profile-thumb active profile-active">
+                                            <a href="javascript:void(0)">
+                                                <figure class="profile-thumb-small">
+                                                    <img src="assets/images/profile/profile-35x35-10.jpg"
+                                                        alt="profile picture">
+                                                </figure>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- profile picture end -->
+
+                                    <!-- profile picture end -->
+                                    <div class="single-slide">
+                                        <div class="profile-thumb active profile-active">
+                                            <a href="javascript:void(0)">
+                                                <figure class="profile-thumb-small">
+                                                    <img src="assets/images/profile/profile-35x35-11.jpg"
+                                                        alt="profile picture">
+                                                </figure>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- profile picture end -->
+
+                                    <!-- profile picture end -->
+                                    <div class="single-slide">
+                                        <div class="profile-thumb active profile-active">
+                                            <a href="javascript:void(0)">
+                                                <figure class="profile-thumb-small">
+                                                    <img src="assets/images/profile/profile-35x35-12.jpg"
+                                                        alt="profile picture">
+                                                </figure>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- profile picture end -->
+
+                                    <!-- profile picture end -->
+                                    <div class="single-slide">
+                                        <div class="profile-thumb active profile-active">
+                                            <a href="javascript:void(0)">
+                                                <figure class="profile-thumb-small">
+                                                    <img src="assets/images/profile/profile-35x35-13.jpg"
+                                                        alt="profile picture">
+                                                </figure>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- profile picture end -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-card position-relative">
+                            <div class="live-chat-inner">
+                                <div class="chat-text-field">
+                                    <textarea class="live-chat-field custom-scroll"
+                                        placeholder="Text Message"></textarea>
+                                    <button class="chat-message-send" type="submit" value="submit">
+                                        <img src="assets/images/icons/plane.png" alt="">
+                                    </button>
+                                </div>
+                                <div class="chat-output-box">
+                                    <div class="live-chat-title">
+                                        <!-- profile picture end -->
+                                        <div class="profile-thumb active">
+                                            <a href="#">
+                                                <figure class="profile-thumb-small">
+                                                    <img src="assets/images/profile/profile-35x35-13.jpg"
+                                                        alt="profile picture">
+                                                </figure>
+                                            </a>
+                                        </div>
+                                        <!-- profile picture end -->
+                                        <div class="posted-author">
+                                            <h6 class="author"><a href="profile.html">Robart Marloyan</a></h6>
+                                            <span class="active-pro">active now</span>
+                                        </div>
+                                        <div class="live-chat-settings ms-auto">
+                                            <button class="chat-settings"><i class="flaticon-settings"></i></button>
+                                            <button class="close-btn" data-close="chat-output-box"><i
+                                                    class="flaticon-cross-out"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="message-list-inner">
+                                        <ul class="message-list custom-scroll">
+                                            <li class="text-friends">
+                                                <p>Many desktop publishing packages and web page editors now use Lorem
+                                                    Ipsum as their default model text</p>
+                                                <div class="message-time">10 minute ago</div>
+                                            </li>
+                                            <li class="text-author">
+                                                <p>Many desktop publishing packages and web page editors</p>
+                                                <div class="message-time">5 minute ago</div>
+                                            </li>
+                                            <li class="text-friends">
+                                                <p>packages and web page editors </p>
+                                                <div class="message-time">2 minute ago</div>
+                                            </li>
+                                            <li class="text-friends">
+                                                <p>Many desktop publishing packages and web page editors now use Lorem
+                                                    Ipsum as their default model text</p>
+                                                <div class="message-time">10 minute ago</div>
+                                            </li>
+                                            <li class="text-author">
+                                                <p>Many desktop publishing packages and web page editors</p>
+                                                <div class="message-time">5 minute ago</div>
+                                            </li>
+                                            <li class="text-friends">
+                                                <p>packages and web page editors </p>
+                                                <div class="message-time">2 minute ago</div>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -838,110 +1018,117 @@
                 </div>
             </div>
         </div>
-    </footer>
-    <!-- footer area end -->
-    <!-- footer area start -->
-    <footer class="d-block d-lg-none">
-        <div class="footer-area reveal-footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="mobile-footer-inner d-flex">
-                            <div class="mobile-frnd-search">
-                                <button class="search-toggle-btn"><i class="flaticon-search"></i></button>
-                            </div>
-                            <div class="mob-frnd-search-inner">
-                                <form class="mob-frnd-search-box d-flex">
-                                    <input type="text" placeholder="Search Your Friends" class="mob-frnd-search-field">
-                                </form>
-                            </div>
-                            <div class="card card-small mb-0 active-profile-mob-wrapper">
-                                <div class="active-profiles-mob-wrapper slick-row-10">
-                                    <div class="active-profile-mobile">
-                                        <!-- profile picture end -->
-                                        <div class="single-slide">
-                                            <div class="profile-thumb active profile-active">
-                                                <a href="#">
-                                                    <figure class="profile-thumb-small profile-active">
-                                                        <img src="assets/images/profile/profile-small-1.jpg" alt="profile picture">
-                                                    </figure>
-                                                </a>
-                                            </div>
+    </div>
+</footer>
+<!-- footer area end -->
+<!-- footer area start -->
+<footer class="d-block d-lg-none">
+    <div class="footer-area reveal-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="mobile-footer-inner d-flex">
+                        <div class="mobile-frnd-search">
+                            <button class="search-toggle-btn"><i class="flaticon-search"></i></button>
+                        </div>
+                        <div class="mob-frnd-search-inner">
+                            <form class="mob-frnd-search-box d-flex">
+                                <input type="text" placeholder="Search Your Friends" class="mob-frnd-search-field">
+                            </form>
+                        </div>
+                        <div class="card card-small mb-0 active-profile-mob-wrapper">
+                            <div class="active-profiles-mob-wrapper slick-row-10">
+                                <div class="active-profile-mobile">
+                                    <!-- profile picture end -->
+                                    <div class="single-slide">
+                                        <div class="profile-thumb active profile-active">
+                                            <a href="#">
+                                                <figure class="profile-thumb-small profile-active">
+                                                    <img src="assets/images/profile/profile-small-1.jpg"
+                                                        alt="profile picture">
+                                                </figure>
+                                            </a>
                                         </div>
-                                        <!-- profile picture end -->
-
-                                        <!-- profile picture end -->
-                                        <div class="single-slide">
-                                            <div class="profile-thumb active profile-active">
-                                                <a href="javascript:void(0)">
-                                                    <figure class="profile-thumb-small profile-active">
-                                                        <img src="assets/images/profile/profile-small-8.jpg" alt="profile picture">
-                                                    </figure>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <!-- profile picture end -->
-
-                                        <!-- profile picture end -->
-                                        <div class="single-slide">
-                                            <div class="profile-thumb active profile-active">
-                                                <a href="javascript:void(0)">
-                                                    <figure class="profile-thumb-small profile-active">
-                                                        <img src="assets/images/profile/profile-small-2.jpg" alt="profile picture">
-                                                    </figure>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <!-- profile picture end -->
-
-                                        <!-- profile picture end -->
-                                        <div class="single-slide">
-                                            <div class="profile-thumb active profile-active">
-                                                <a href="javascript:void(0)">
-                                                    <figure class="profile-thumb-small profile-active">
-                                                        <img src="assets/images/profile/profile-small-3.jpg" alt="profile picture">
-                                                    </figure>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <!-- profile picture end -->
-
-                                        <!-- profile picture end -->
-                                        <div class="single-slide">
-                                            <div class="profile-thumb active profile-active">
-                                                <a href="javascript:void(0)">
-                                                    <figure class="profile-thumb-small profile-active">
-                                                        <img src="assets/images/profile/profile-small-4.jpg" alt="profile picture">
-                                                    </figure>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <!-- profile picture end -->
-
-                                        <!-- profile picture end -->
-                                        <div class="single-slide">
-                                            <div class="profile-thumb active profile-active">
-                                                <a href="javascript:void(0)">
-                                                    <figure class="profile-thumb-small profile-active">
-                                                        <img src="assets/images/profile/profile-small-5.jpg" alt="profile picture">
-                                                    </figure>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <!-- profile picture end -->
-
-                                        <!-- profile picture end -->
-                                        <div class="single-slide">
-                                            <div class="profile-thumb active profile-active">
-                                                <a href="javascript:void(0)">
-                                                    <figure class="profile-thumb-small profile-active">
-                                                        <img src="assets/images/profile/profile-small-9.jpg" alt="profile picture">
-                                                    </figure>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <!-- profile picture end -->
                                     </div>
+                                    <!-- profile picture end -->
+
+                                    <!-- profile picture end -->
+                                    <div class="single-slide">
+                                        <div class="profile-thumb active profile-active">
+                                            <a href="javascript:void(0)">
+                                                <figure class="profile-thumb-small profile-active">
+                                                    <img src="assets/images/profile/profile-small-8.jpg"
+                                                        alt="profile picture">
+                                                </figure>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- profile picture end -->
+
+                                    <!-- profile picture end -->
+                                    <div class="single-slide">
+                                        <div class="profile-thumb active profile-active">
+                                            <a href="javascript:void(0)">
+                                                <figure class="profile-thumb-small profile-active">
+                                                    <img src="assets/images/profile/profile-small-2.jpg"
+                                                        alt="profile picture">
+                                                </figure>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- profile picture end -->
+
+                                    <!-- profile picture end -->
+                                    <div class="single-slide">
+                                        <div class="profile-thumb active profile-active">
+                                            <a href="javascript:void(0)">
+                                                <figure class="profile-thumb-small profile-active">
+                                                    <img src="assets/images/profile/profile-small-3.jpg"
+                                                        alt="profile picture">
+                                                </figure>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- profile picture end -->
+
+                                    <!-- profile picture end -->
+                                    <div class="single-slide">
+                                        <div class="profile-thumb active profile-active">
+                                            <a href="javascript:void(0)">
+                                                <figure class="profile-thumb-small profile-active">
+                                                    <img src="assets/images/profile/profile-small-4.jpg"
+                                                        alt="profile picture">
+                                                </figure>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- profile picture end -->
+
+                                    <!-- profile picture end -->
+                                    <div class="single-slide">
+                                        <div class="profile-thumb active profile-active">
+                                            <a href="javascript:void(0)">
+                                                <figure class="profile-thumb-small profile-active">
+                                                    <img src="assets/images/profile/profile-small-5.jpg"
+                                                        alt="profile picture">
+                                                </figure>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- profile picture end -->
+
+                                    <!-- profile picture end -->
+                                    <div class="single-slide">
+                                        <div class="profile-thumb active profile-active">
+                                            <a href="javascript:void(0)">
+                                                <figure class="profile-thumb-small profile-active">
+                                                    <img src="assets/images/profile/profile-small-9.jpg"
+                                                        alt="profile picture">
+                                                </figure>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- profile picture end -->
                                 </div>
                             </div>
                         </div>
@@ -949,5 +1136,6 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 {% endblock %}

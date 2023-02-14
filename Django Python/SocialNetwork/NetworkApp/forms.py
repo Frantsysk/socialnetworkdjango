@@ -2,7 +2,7 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import get_user_model
 from django.forms import ModelForm
-from .models import Profile, Message
+from .models import Profile, Message, Post, Comment
 
 
 class CustomUserCreationForm(UserCreationForm):
@@ -39,18 +39,25 @@ class ProfileForm(ModelForm):
 
 class MessageForm(ModelForm):
     class Meta:
-        fields = ('text',)
+        fields = ('text', 'image')
         model = Message
         widgets = {
         'text': forms.Textarea(attrs={'placeholder': 'Text', 'class': 'single-field'})
         }
 
 
+class PostForm(ModelForm):
+    class Meta:
+        fields = ('title','text', 'image')
+        model = Post
+        widgets = {
+        'text': forms.Textarea(attrs={'placeholder': 'Text', 'class': 'single-field'})
+        }
 
-
-
-
-    
+class CommentForm(ModelForm):
+    class Meta:
+        fields = ('content', 'image')
+        model = Comment
 
 
 

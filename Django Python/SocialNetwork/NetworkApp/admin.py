@@ -1,6 +1,10 @@
 from django.contrib import admin
-from .models import Profile, Friend, Message
+from .models import Profile, Friend, Message, Post, Comment, Like
 
 admin.site.register(Profile)
 admin.site.register(Friend)
 admin.site.register(Message)
+admin.site.register(Post)
+admin.site.register(Comment)
+admin.site.register(Like)
+

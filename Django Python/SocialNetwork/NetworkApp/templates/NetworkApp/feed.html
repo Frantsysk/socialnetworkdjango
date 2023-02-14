@@ -1,0 +1,45 @@
+{% extends 'NetworkApp/base.html' %}
+{% block content %}
+
+{% load static %}
+
+{% include 'NetworkApp/navigation.html' %}
+
+{% include 'NetworkApp/navigation_mob.html' %}
+
+<main style="margin-top: 10px; margin-left: 500px;">
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1> FEED! </h1>
+    <hr>
+
+    {% for post in posts %}
+
+    <div> 
+        <h5> {{ post.owner }}  </h5>
+        <br>
+        {{ post.title }} 
+        <br>
+        {{ post.text }} 
+        <br>
+        <br>
+        {% if post.image %} 
+        <img src="{{ post.image.url }} " alt="image">
+        {% endif %}
+        <br>
+        <a href="{% url 'like' post.id %}"> like ({{ post.like.count }}) </a> 
+        <a href="{% url 'dislike' post.id %}"> dislike </a> 
+        <br>
+        {{ post.created_at }} 
+        <hr>
+    </div>
+
+    {% endfor %}
+
+
+</main>
+{% endblock %}
